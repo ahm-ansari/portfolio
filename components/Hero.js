@@ -56,7 +56,7 @@ export default function Hero() {
               <div className="hero__card hero__card--back1" />
               <div className="hero__card hero__card--back2" />
               <div className="hero__card hero__card--main">
-                <div className="hero__avatar">AH</div>
+                <div className="hero__avatar"></div>
                 <div className="hero__card-name">Abul Hassan M. Ansari</div>
                 <div className="hero__card-title">Data Analyst · Full-Stack Developer</div>
                 <div className="hero__card-chips">

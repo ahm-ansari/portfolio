@@ -25,9 +25,12 @@ export default function Navbar() {
     <>
       <nav className={`nav${scrolled ? ' scrolled' : ''}`} aria-label="Main navigation">
         <div className="container nav__inner">
+          <div className="nav__in">
+          <div className="avatar"></div>
           <a href="#hero" className="nav__logo" aria-label="Abul Hassan home">
-            AH<span>.</span>
+            ABUL HASSAN <span>MOHAMED ANSARI. M</span>
           </a>
+          </div>
 
           {/* Desktop links */}
           <ul className="nav__links" role="list">

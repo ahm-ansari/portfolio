@@ -66,10 +66,10 @@ export default function About() {
           {/* Left column */}
           <div className="about__left">
             <div className="about__avatar-wrap">
-              <div className="about__avatar">AH</div>
+              <div className="about__avatar"></div>
               <div className="about__status">Open to Opportunities</div>
             </div>
-            <div className="about__name">Abul Hassan M. Ansari</div>
+            <div className="about__name">Abul Hassan Mohamed Ansari</div>
             <div className="about__role">Senior Data Analyst &amp; Developer</div>
             <p style={{ fontSize: '.88rem', color: 'var(--ink-soft)' }}>
               Doha, Qatar · Valid QID (NOC Available)
