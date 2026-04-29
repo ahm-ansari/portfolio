@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
+  swcMinify: true,
   images: {
-    domains: [],
     unoptimized: false,
     formats: ['image/avif', 'image/webp'],
   },
@@ -14,6 +13,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-}
+};
 
 module.exports = nextConfig;

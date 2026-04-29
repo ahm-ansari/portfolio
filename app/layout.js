@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  metadataBase: new URL('https://abulhassan.dev'),
+  metadataBase: new URL('https://ahm-ansari.vercel.app'),
   title: {
     default: 'Abul Hassan Mohamed Ansari | Data Analyst & Full-Stack Developer in Qatar',
     template: '%s | Abul Hassan Mohamed Ansari',
