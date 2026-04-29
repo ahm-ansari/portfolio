@@ -57,12 +57,12 @@ function Charts() {
     C.defaults.color = '#6C757D';
 
     const months = [
-      'Jan 22','Feb 22','Mar 22','Apr 22','May 22','Jun 22','Jul 22','Aug 22','Sep 22','Oct 22','Nov 22','Dec 22',
-      'Jan 23','Feb 23','Mar 23','Apr 23','May 23','Jun 23','Jul 23','Aug 23','Sep 23','Oct 23','Nov 23','Dec 23',
-      'Jan 24','Feb 24','Mar 24','Apr 24','May 24','Jun 24','Jul 24','Aug 24','Sep 24','Oct 24','Nov 24','Dec 24',
+      'Jan 22', 'Feb 22', 'Mar 22', 'Apr 22', 'May 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Oct 22', 'Nov 22', 'Dec 22',
+      'Jan 23', 'Feb 23', 'Mar 23', 'Apr 23', 'May 23', 'Jun 23', 'Jul 23', 'Aug 23', 'Sep 23', 'Oct 23', 'Nov 23', 'Dec 23',
+      'Jan 24', 'Feb 24', 'Mar 24', 'Apr 24', 'May 24', 'Jun 24', 'Jul 24', 'Aug 24', 'Sep 24', 'Oct 24', 'Nov 24', 'Dec 24',
     ];
-    const leadsData = [2100,2050,2200,2350,2400,2450,2500,2520,2600,2900,2850,2820,2500,2480,2650,2700,2780,2820,2880,2900,2950,3100,3050,3000,2700,2650,2800,2900,2950,3020,2964,2927,2905,2994,2801,2999];
-    const convData  = [9.5,9.8,10,10.5,11,10.8,11.2,11,11.5,9.8,9.5,5.2,10.2,10.4,10.8,11.1,11.3,11,11.4,11.2,11.8,10,9.8,5,11,11.2,11.5,11.8,11.4,11.2,11.5,10.7,12.2,7.2,7.4,3];
+    const leadsData = [2100, 2050, 2200, 2350, 2400, 2450, 2500, 2520, 2600, 2900, 2850, 2820, 2500, 2480, 2650, 2700, 2780, 2820, 2880, 2900, 2950, 3100, 3050, 3000, 2700, 2650, 2800, 2900, 2950, 3020, 2964, 2927, 2905, 2994, 2801, 2999];
+    const convData = [9.5, 9.8, 10, 10.5, 11, 10.8, 11.2, 11, 11.5, 9.8, 9.5, 5.2, 10.2, 10.4, 10.8, 11.1, 11.3, 11, 11.4, 11.2, 11.8, 10, 9.8, 5, 11, 11.2, 11.5, 11.8, 11.4, 11.2, 11.5, 10.7, 12.2, 7.2, 7.4, 3];
 
     if (monthly.current) {
       chartsRef.current.m?.destroy();
@@ -87,9 +87,9 @@ function Charts() {
       });
     }
 
-    const sources = ['JustDial','Google Ads','GMB','Sulekha','Instagram Ads','Facebook Ads','Website Inq.','WhatsApp','FB Lead Form','Referral'];
-    const sourceCounts = [18865,16734,10589,9601,8399,7377,7322,5175,4318,4145];
-    const sourceColors = ['#0A1628','#0FA882','#E8A020','#2563EB','#D85A30','#854F0B','#0F6E56','#3C3489','#1D9E75','#7A4F08'];
+    const sources = ['JustDial', 'Google Ads', 'GMB', 'Sulekha', 'Instagram Ads', 'Facebook Ads', 'Website Inq.', 'WhatsApp', 'FB Lead Form', 'Referral'];
+    const sourceCounts = [18865, 16734, 10589, 9601, 8399, 7377, 7322, 5175, 4318, 4145];
+    const sourceColors = ['#0A1628', '#0FA882', '#E8A020', '#2563EB', '#D85A30', '#854F0B', '#0F6E56', '#3C3489', '#1D9E75', '#7A4F08'];
 
     if (sourceBar.current) {
       chartsRef.current.sb?.destroy();
@@ -100,7 +100,7 @@ function Charts() {
       });
     }
 
-    const convRates = [9.3,13,15.1,7.8,6.2,7.1,16.4,11.9,6.9,28.4];
+    const convRates = [9.3, 13, 15.1, 7.8, 6.2, 7.1, 16.4, 11.9, 6.9, 28.4];
     if (convRate.current) {
       chartsRef.current.cr?.destroy();
       chartsRef.current.cr = new C(convRate.current, {
@@ -142,7 +142,7 @@ function Charts() {
       chartsRef.current.rt?.destroy();
       chartsRef.current.rt = new C(respTime.current, {
         type: 'bar',
-        data: { labels: ['< 1 hr', '1–4 hrs', '4–8 hrs', '8–24 hrs', '24+ hrs'], datasets: [{ label: 'Conversion Rate %', data: [12.9,11.2,9.6,9.5,6.9], backgroundColor: ['#0FA882','#5DCAA5','#E8A020','#D85A30','#8B2E10'], borderRadius: 6 }] },
+        data: { labels: ['< 1 hr', '1–4 hrs', '4–8 hrs', '8–24 hrs', '24+ hrs'], datasets: [{ label: 'Conversion Rate %', data: [12.9, 11.2, 9.6, 9.5, 6.9], backgroundColor: ['#0FA882', '#5DCAA5', '#E8A020', '#D85A30', '#8B2E10'], borderRadius: 6 }] },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.05)' }, max: 16, ticks: { callback: v => v + '%' } } } },
       });
     }
@@ -151,7 +151,7 @@ function Charts() {
       chartsRef.current.zd?.destroy();
       chartsRef.current.zd = new C(zoneDonut.current, {
         type: 'doughnut',
-        data: { labels: ['South','Central','North','West','OMR','GST Belt'], datasets: [{ data: [234,214,199,165,155,119], backgroundColor: ['#0A1628','#0FA882','#E8A020','#2563EB','#D85A30','#ADB5BD'], borderWidth: 2, borderColor: '#fff' }] },
+        data: { labels: ['South', 'Central', 'North', 'West', 'OMR', 'GST Belt'], datasets: [{ data: [234, 214, 199, 165, 155, 119], backgroundColor: ['#0A1628', '#0FA882', '#E8A020', '#2563EB', '#D85A30', '#ADB5BD'], borderWidth: 2, borderColor: '#fff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '68%', plugins: { legend: { display: false } } },
       });
     }
@@ -284,16 +284,16 @@ function FunnelViz() {
 
 /* ─── Heatmap ──────────────────────────────────────── */
 function Heatmap() {
-  const sources = ['Google Ads','JustDial','Facebook Ads','Instagram Ads','Sulekha','Referral','WhatsApp'];
-  const quarters = ['Q1 22','Q2 22','Q3 22','Q4 22','Q1 23','Q2 23','Q3 23','Q4 23','Q1 24','Q2 24','Q3 24','Q4 24'];
+  const sources = ['Google Ads', 'JustDial', 'Facebook Ads', 'Instagram Ads', 'Sulekha', 'Referral', 'WhatsApp'];
+  const quarters = ['Q1 22', 'Q2 22', 'Q3 22', 'Q4 22', 'Q1 23', 'Q2 23', 'Q3 23', 'Q4 23', 'Q1 24', 'Q2 24', 'Q3 24', 'Q4 24'];
   const data = [
-    [1100,1150,1250,1450,1250,1320,1400,1580,1350,1380,1420,1680],
-    [1400,1380,1420,1620,1500,1540,1600,1780,1580,1600,1640,1840],
-    [480,500,530,620,520,560,590,680,550,580,600,700],
-    [520,540,580,680,560,610,640,730,610,640,660,760],
-    [600,640,680,790,700,730,770,880,720,760,790,880],
-    [260,270,290,340,290,310,320,370,310,320,340,380],
-    [320,340,370,420,360,390,410,470,390,410,430,490],
+    [1100, 1150, 1250, 1450, 1250, 1320, 1400, 1580, 1350, 1380, 1420, 1680],
+    [1400, 1380, 1420, 1620, 1500, 1540, 1600, 1780, 1580, 1600, 1640, 1840],
+    [480, 500, 530, 620, 520, 560, 590, 680, 550, 580, 600, 700],
+    [520, 540, 580, 680, 560, 610, 640, 730, 610, 640, 660, 760],
+    [600, 640, 680, 790, 700, 730, 770, 880, 720, 760, 790, 880],
+    [260, 270, 290, 340, 290, 310, 320, 370, 310, 320, 340, 380],
+    [320, 340, 370, 420, 360, 390, 410, 470, 390, 410, 430, 490],
   ];
   const maxVal = Math.max(...data.flat());
   const cellBg = (v) => {
@@ -381,7 +381,7 @@ export default function LeadGenReport() {
             ← Back to Portfolio
           </Link>
           <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-          <span style={{ color: '#E8A020', fontSize: '13px', fontWeight: 500 }}>Lead Generation Analysis — SafeGuard Security</span>
+          <span style={{ color: '#E8A020', fontSize: '13px', fontWeight: 500 }}>Lead Generation Analysis — ABC private Security Company.</span>
         </div>
 
         {/* ══ COVER ══════════════════════════════════════════ */}
@@ -420,8 +420,8 @@ export default function LeadGenReport() {
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '28px', flexWrap: 'wrap', gap: '12px' }}>
               <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '12px' }}>
-                <strong style={{ color: '#fff', display: 'block', fontSize: '14px', marginBottom: '4px' }}>SafeGuard Security Services Pvt. Ltd.</strong>
-                Chennai, Tamil Nadu · India · GST Services / B2B+B2C Security
+                <strong style={{ color: '#fff', display: 'block', fontSize: '14px', marginBottom: '4px' }}>ABC Private Security Services Company</strong>
+                Chennai, Tamil Nadu · India · B2B+B2C Security
               </div>
               <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: '22px', color: '#E8A020', letterSpacing: '0.02em', textAlign: 'right' }}>
                 SecureLeads
@@ -436,7 +436,7 @@ export default function LeadGenReport() {
 
           {/* S1 · Project Overview */}
           <section aria-labelledby="s1-heading" style={{ marginBottom: '64px' }}>
-            <SecHeader num="01" title="Project Overview" desc="SafeGuard Security Services operates across Chennai's corporate, residential, and industrial segments. This report analyzes 3 years of lead generation data across 14 channels to identify conversion drivers, budget inefficiencies, and scalable growth opportunities." />
+            <SecHeader num="01" title="Project Overview" desc="ABC Private Security Services operates across Chennai's corporate, residential, and industrial segments. This report analyzes 3 years of lead generation data across 14 channels to identify conversion drivers, budget inefficiencies, and scalable growth opportunities." />
             <div className="schema-grid-3">
               {[
                 { name: 'Industry', desc: 'Private Security Services — manpower supply, access control, event security' },
@@ -462,7 +462,7 @@ export default function LeadGenReport() {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
                 <thead>
                   <tr style={{ background: '#F8F9FA' }}>
-                    {['Field Name','Data Type','Description','Sample Value'].map(h => (
+                    {['Field Name', 'Data Type', 'Description', 'Sample Value'].map(h => (
                       <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontWeight: 600, fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.07em', color: '#6C757D', borderBottom: '1px solid rgba(10,22,40,0.1)' }}>{h}</th>
                     ))}
                   </tr>
@@ -566,12 +566,12 @@ export default function LeadGenReport() {
           <section aria-labelledby="s7-heading" style={{ marginBottom: '64px' }}>
             <SecHeader num="07" title="Digital Marketing Optimization Strategy" />
             <div className="strategy-grid-3">
-              <StratCard color="#E8A020" icon="🔍" title="Google Ads Optimization" items={['Target buyer-intent keywords: "security guard service Chennai", "office security agency OMR"','Eliminate broad match — use exact + phrase only','Negative keywords: "free", "job", "training", "course"','Separate campaigns for each segment (Corporate, Residential, Industrial)','Call extensions + location extensions mandatory','Ad scheduling: 9AM–7PM weekdays; reduce weekend spend by 40%']} />
-              <StratCard color="#0FA882" icon="📱" title="Meta Ads Strategy" items={['Retarget website visitors (30-day window) with social proof ads','Lookalike audiences from existing corporate client list','Separate creatives for apartment managers vs IT park facilities heads','Lead Form ads for residential; Message ads for corporate','Video testimonials from existing clients — 15-sec reels','Monthly budget cap: ₹40K/month Facebook; ₹30K Instagram']} />
-              <StratCard color="#2563EB" icon="🌐" title="SEO & GMB Optimization" items={['Target: "security services in Chennai" (3,600 monthly searches)','GMB: post weekly updates, add 20+ photos, enable messaging','Create location pages: /security-services-adyar, /security-omr-corridor','Schema markup for LocalBusiness + ServiceArea','Blog strategy: 2 posts/month on safety tips, regulatory compliance','Collect 50+ Google reviews with templated follow-up request']} />
-              <StratCard color="#D85A30" icon="💬" title="WhatsApp & CRM Automation" items={['Instant auto-reply within 5 minutes of WhatsApp inquiry','Lead nurturing sequence: Day 1 → brochure, Day 3 → case study, Day 7 → offer','CRM integration: Zoho CRM / Freshsales for lead tracking','Assign leads to agents within 30 minutes based on zone + segment','SLA alert system: escalate if no contact within 2 hours','Weekly pipeline review meetings with sales team']} />
-              <StratCard color="#0A1628" icon="🎯" title="Conversion Rate Optimization" items={['Landing page A/B test: phone-first CTA vs form vs WhatsApp button','Add trust signals: client logos, guard count, years in business, certifications','Mobile-first landing page (60%+ traffic is mobile)','Add live chat widget (Tidio or Intercom)','Proposal PDF template: personalized within 2 hours of lead','Offer a free 7-day trial for residential — reduces price objection']} />
-              <StratCard color="#E8A020" icon="🤝" title="Referral & Partnership Program" items={['Referral program: ₹5,000 reward per converted B2B referral','Partner with property management firms, facility managers, RWAs','Tie up with event management companies for event security contracts','Corporate HR referral tie-up: 3-month free guard for employee housing complex','Target: double referral share from 4% → 10% within 12 months']} />
+              <StratCard color="#E8A020" icon="🔍" title="Google Ads Optimization" items={['Target buyer-intent keywords: "security guard service Chennai", "office security agency OMR"', 'Eliminate broad match — use exact + phrase only', 'Negative keywords: "free", "job", "training", "course"', 'Separate campaigns for each segment (Corporate, Residential, Industrial)', 'Call extensions + location extensions mandatory', 'Ad scheduling: 9AM–7PM weekdays; reduce weekend spend by 40%']} />
+              <StratCard color="#0FA882" icon="📱" title="Meta Ads Strategy" items={['Retarget website visitors (30-day window) with social proof ads', 'Lookalike audiences from existing corporate client list', 'Separate creatives for apartment managers vs IT park facilities heads', 'Lead Form ads for residential; Message ads for corporate', 'Video testimonials from existing clients — 15-sec reels', 'Monthly budget cap: ₹40K/month Facebook; ₹30K Instagram']} />
+              <StratCard color="#2563EB" icon="🌐" title="SEO & GMB Optimization" items={['Target: "security services in Chennai" (3,600 monthly searches)', 'GMB: post weekly updates, add 20+ photos, enable messaging', 'Create location pages: /security-services-adyar, /security-omr-corridor', 'Schema markup for LocalBusiness + ServiceArea', 'Blog strategy: 2 posts/month on safety tips, regulatory compliance', 'Collect 50+ Google reviews with templated follow-up request']} />
+              <StratCard color="#D85A30" icon="💬" title="WhatsApp & CRM Automation" items={['Instant auto-reply within 5 minutes of WhatsApp inquiry', 'Lead nurturing sequence: Day 1 → brochure, Day 3 → case study, Day 7 → offer', 'CRM integration: Zoho CRM / Freshsales for lead tracking', 'Assign leads to agents within 30 minutes based on zone + segment', 'SLA alert system: escalate if no contact within 2 hours', 'Weekly pipeline review meetings with sales team']} />
+              <StratCard color="#0A1628" icon="🎯" title="Conversion Rate Optimization" items={['Landing page A/B test: phone-first CTA vs form vs WhatsApp button', 'Add trust signals: client logos, guard count, years in business, certifications', 'Mobile-first landing page (60%+ traffic is mobile)', 'Add live chat widget (Tidio or Intercom)', 'Proposal PDF template: personalized within 2 hours of lead', 'Offer a free 7-day trial for residential — reduces price objection']} />
+              <StratCard color="#E8A020" icon="🤝" title="Referral & Partnership Program" items={['Referral program: ₹5,000 reward per converted B2B referral', 'Partner with property management firms, facility managers, RWAs', 'Tie up with event management companies for event security contracts', 'Corporate HR referral tie-up: 3-month free guard for employee housing complex', 'Target: double referral share from 4% → 10% within 12 months']} />
             </div>
             <BudgetCard />
           </section>
@@ -609,7 +609,7 @@ export default function LeadGenReport() {
         {/* Footer */}
         <footer style={{ background: '#0A1628', padding: '32px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>
-            <strong style={{ color: '#fff' }}>SafeGuard Security Services · Lead Generation Analytics Report</strong>
+            <strong style={{ color: '#fff' }}>Private Security Services Company · Lead Generation Analytics Report</strong>
             <span style={{ display: 'block', marginTop: '2px' }}>Prepared by: Abul Hassan Mohamed Ansari · FY 2022–2024 · Chennai, India</span>
           </div>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', fontFamily: 'DM Mono, monospace' }}>
@@ -683,7 +683,7 @@ function SourceTable() {
     <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
       <thead>
         <tr style={{ background: '#F8F9FA' }}>
-          {['Source','Leads','Conv %','Avg CPL (₹)','CAC (₹)','Revenue (₹ L)','ROI Tier','Action'].map(h => (
+          {['Source', 'Leads', 'Conv %', 'Avg CPL (₹)', 'CAC (₹)', 'Revenue (₹ L)', 'ROI Tier', 'Action'].map(h => (
             <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontWeight: 600, fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.07em', color: '#6C757D', borderBottom: '1px solid rgba(10,22,40,0.1)' }}>{h}</th>
           ))}
         </tr>
@@ -774,7 +774,7 @@ function PbiWireframe() {
         <div style={{ width: '20px', height: '20px', background: '#E8A020', borderRadius: '3px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>S</div>
         <div style={{ fontSize: '16px', fontWeight: 600, color: '#fff' }}>SafeGuard · Lead Generation Executive Dashboard</div>
         <div style={{ display: 'flex', gap: '8px', marginLeft: 'auto', flexWrap: 'wrap' }}>
-          {['Year: 2024','Zone: All','Source: All','Agent: All'].map(f => (
+          {['Year: 2024', 'Zone: All', 'Source: All', 'Agent: All'].map(f => (
             <div key={f} style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '100px', padding: '4px 12px', fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>{f}</div>
           ))}
           <div style={{ background: 'rgba(232,160,32,0.2)', border: '1px solid rgba(232,160,32,0.4)', borderRadius: '100px', padding: '4px 12px', fontSize: '11px', color: '#F5C55A' }}>Reset Filters</div>
@@ -782,9 +782,9 @@ function PbiWireframe() {
       </div>
       {/* KPI row */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: '10px', marginBottom: '14px' }} className="kpi-grid-5">
-        {[['35,214','Total Leads'],['3,904','Conversions'],['₹37.3 Cr','Revenue'],['₹224','Avg CPL'],['11.1%','Conv Rate']].map(([val,lbl],i) => (
-          <div key={lbl} style={{ background: 'rgba(255,255,255,0.07)', borderRadius: '8px', padding: '12px 14px', border: i===4?'1px solid rgba(232,160,32,0.4)':'none' }}>
-            <div style={{ fontSize: '20px', fontWeight: 700, color: i===4?'#4ADE80':'#E8A020' }}>{val}</div>
+        {[['35,214', 'Total Leads'], ['3,904', 'Conversions'], ['₹37.3 Cr', 'Revenue'], ['₹224', 'Avg CPL'], ['11.1%', 'Conv Rate']].map(([val, lbl], i) => (
+          <div key={lbl} style={{ background: 'rgba(255,255,255,0.07)', borderRadius: '8px', padding: '12px 14px', border: i === 4 ? '1px solid rgba(232,160,32,0.4)' : 'none' }}>
+            <div style={{ fontSize: '20px', fontWeight: 700, color: i === 4 ? '#4ADE80' : '#E8A020' }}>{val}</div>
             <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.45)', marginTop: '3px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{lbl}</div>
           </div>
         ))}
@@ -794,26 +794,26 @@ function PbiWireframe() {
         <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '14px', minHeight: '160px' }}>
           <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '10px' }}>Monthly Lead Trend</div>
           <svg viewBox="0 0 300 100" style={{ width: '100%', height: '100px' }}>
-            <polyline points="10,80 35,65 60,55 85,60 110,45 135,50 160,40 185,55 210,42 235,35 260,45 285,38" fill="none" stroke="#E8A020" strokeWidth="2"/>
-            {[10,35,60,85,110,135,160,185,210,235,260,285].map((x,i) => {
-              const hs = [18,33,43,38,53,48,58,43,56,63,53,60];
-              return <rect key={x} x={x} y={90-hs[i]} width="14" height={hs[i]} fill="rgba(255,255,255,0.08)" rx="2"/>;
+            <polyline points="10,80 35,65 60,55 85,60 110,45 135,50 160,40 185,55 210,42 235,35 260,45 285,38" fill="none" stroke="#E8A020" strokeWidth="2" />
+            {[10, 35, 60, 85, 110, 135, 160, 185, 210, 235, 260, 285].map((x, i) => {
+              const hs = [18, 33, 43, 38, 53, 48, 58, 43, 56, 63, 53, 60];
+              return <rect key={x} x={x} y={90 - hs[i]} width="14" height={hs[i]} fill="rgba(255,255,255,0.08)" rx="2" />;
             })}
           </svg>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '14px', minHeight: '160px' }}>
           <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '10px' }}>Source Share</div>
           <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100px' }}>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8A020" strokeWidth="20" strokeDasharray="44 196"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#0FA882" strokeWidth="20" strokeDasharray="36 204" strokeDashoffset="-44"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#2563EB" strokeWidth="20" strokeDasharray="28 212" strokeDashoffset="-80"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#D85A30" strokeWidth="20" strokeDasharray="132 108" strokeDashoffset="-108"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#E8A020" strokeWidth="20" strokeDasharray="44 196" />
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#0FA882" strokeWidth="20" strokeDasharray="36 204" strokeDashoffset="-44" />
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#2563EB" strokeWidth="20" strokeDasharray="28 212" strokeDashoffset="-80" />
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#D85A30" strokeWidth="20" strokeDasharray="132 108" strokeDashoffset="-108" />
           </svg>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '14px', minHeight: '160px' }}>
           <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '10px' }}>Funnel Visual</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '4px' }}>
-            {[['All Leads — 35,214','100%','rgba(255,255,255,0.15)','rgba(255,255,255,0.5)'],['Contacted — 32,700','80%','rgba(15,168,130,0.3)','#9FE1CB'],['Proposal','30%','rgba(15,168,130,0.5)','#9FE1CB'],['Negotiation','20%','rgba(232,160,32,0.5)','#E8A020'],['Conv','11%','#E8A020','#1E2A3A']].map(([t,w,bg,tc]) => (
+            {[['All Leads — 35,214', '100%', 'rgba(255,255,255,0.15)', 'rgba(255,255,255,0.5)'], ['Contacted — 32,700', '80%', 'rgba(15,168,130,0.3)', '#9FE1CB'], ['Proposal', '30%', 'rgba(15,168,130,0.5)', '#9FE1CB'], ['Negotiation', '20%', 'rgba(232,160,32,0.5)', '#E8A020'], ['Conv', '11%', '#E8A020', '#1E2A3A']].map(([t, w, bg, tc]) => (
               <div key={t} style={{ height: '14px', background: bg, borderRadius: '3px', width: w, fontSize: '9px', color: tc, display: 'flex', alignItems: 'center', paddingLeft: '6px' }}>{t}</div>
             ))}
           </div>
@@ -894,10 +894,10 @@ function BudgetCard() {
 
 function SwotGrid() {
   const cells = [
-    { cls: 's', headC: '#3B6D11', titleC: '#27500A', bg: '#EAF3DE', head: 'Internal', title: 'Strengths', dotC: '#639922', textC: '#3B6D11', items: ['Consistent recurring contract revenue — monthly retainers reduce churn risk','High CLV (₹93K avg) relative to low CAC (₹2,190) — strong unit economics','Multi-segment presence (corporate, residential, industrial) reduces concentration risk','Established Google My Business presence driving 15% organic conversion rate','15-member trained sales team with CRM-ready workflow','Strong referral network — 28.4% conversion, highest among all channels'] },
-    { cls: 'w', headC: '#8B2E10', titleC: '#711B0A', bg: '#FAECE7', head: 'Internal', title: 'Weaknesses', dotC: '#D85A30', textC: '#8B2E10', items: ['55% lead loss rate — over half of leads lost, mostly price-related objections','Avg response time 5.3 hours — well above the 1-hour golden window','Instagram Ads CAC ₹5,542 — worst performing paid channel, poor ROI','No formal lead scoring system — all leads treated equally by sales team','Weak content marketing — no SEO-optimized blog, low organic traffic','No automated lead nurturing — manual follow-ups prone to drop-off'] },
-    { cls: 'o', headC: '#0B7A5C', titleC: '#085041', bg: '#E1F5EE', head: 'External', title: 'Opportunities', dotC: '#0FA882', textC: '#0B7A5C', items: ['OMR IT corridor expansion — 15+ new IT parks planned 2025–2026','Corporate security compliance mandates (ISO 14001, PSARA) driving demand','WhatsApp Business API allows automated proposal dispatch at ₹17 CPL','Fragmented Sulekha/JustDial competitors — SEO can steal their organic share','Event security vertical growing 22% annually — Tamil Nadu wedding/concert boom','Smart building integrations (IoT + manned guarding) — premium pricing opportunity'] },
-    { cls: 't', headC: '#7A4F08', titleC: '#633806', bg: '#FEF0C7', head: 'External', title: 'Threats', dotC: '#E8A020', textC: '#7A4F08', items: ['Price undercutting by unorganized local competitors offering INR 8,000/month guards','Rising guard wages and ESIC/PF compliance costs squeezing margins','JustDial and Sulekha algorithm changes can reduce listing visibility overnight','Low customer switching cost — B2B contracts expire annually, easy to lose','Meta Ads CPL rising 15–20% YoY in Chennai security keyword space','AI-powered remote surveillance startups as substitute for manned guarding'] },
+    { cls: 's', headC: '#3B6D11', titleC: '#27500A', bg: '#EAF3DE', head: 'Internal', title: 'Strengths', dotC: '#639922', textC: '#3B6D11', items: ['Consistent recurring contract revenue — monthly retainers reduce churn risk', 'High CLV (₹93K avg) relative to low CAC (₹2,190) — strong unit economics', 'Multi-segment presence (corporate, residential, industrial) reduces concentration risk', 'Established Google My Business presence driving 15% organic conversion rate', '15-member trained sales team with CRM-ready workflow', 'Strong referral network — 28.4% conversion, highest among all channels'] },
+    { cls: 'w', headC: '#8B2E10', titleC: '#711B0A', bg: '#FAECE7', head: 'Internal', title: 'Weaknesses', dotC: '#D85A30', textC: '#8B2E10', items: ['55% lead loss rate — over half of leads lost, mostly price-related objections', 'Avg response time 5.3 hours — well above the 1-hour golden window', 'Instagram Ads CAC ₹5,542 — worst performing paid channel, poor ROI', 'No formal lead scoring system — all leads treated equally by sales team', 'Weak content marketing — no SEO-optimized blog, low organic traffic', 'No automated lead nurturing — manual follow-ups prone to drop-off'] },
+    { cls: 'o', headC: '#0B7A5C', titleC: '#085041', bg: '#E1F5EE', head: 'External', title: 'Opportunities', dotC: '#0FA882', textC: '#0B7A5C', items: ['OMR IT corridor expansion — 15+ new IT parks planned 2025–2026', 'Corporate security compliance mandates (ISO 14001, PSARA) driving demand', 'WhatsApp Business API allows automated proposal dispatch at ₹17 CPL', 'Fragmented Sulekha/JustDial competitors — SEO can steal their organic share', 'Event security vertical growing 22% annually — Tamil Nadu wedding/concert boom', 'Smart building integrations (IoT + manned guarding) — premium pricing opportunity'] },
+    { cls: 't', headC: '#7A4F08', titleC: '#633806', bg: '#FEF0C7', head: 'External', title: 'Threats', dotC: '#E8A020', textC: '#7A4F08', items: ['Price undercutting by unorganized local competitors offering INR 8,000/month guards', 'Rising guard wages and ESIC/PF compliance costs squeezing margins', 'JustDial and Sulekha algorithm changes can reduce listing visibility overnight', 'Low customer switching cost — B2B contracts expire annually, easy to lose', 'Meta Ads CPL rising 15–20% YoY in Chennai security keyword space', 'AI-powered remote surveillance startups as substitute for manned guarding'] },
   ];
   return (
     <div className="swot-grid">
@@ -946,9 +946,9 @@ function Recommendations() {
 
 function MlCards() {
   const cards = [
-    { style: 'a', bg: '#0A1628', tag: 'Model 1 · Classification', tagC: 'rgba(255,255,255,0.35)', title: 'Lead Scoring Engine', titleC: '#E8A020', body: 'XGBoost or LightGBM model trained on 1,05,000 historical leads to predict conversion probability (0–100 score) for every new incoming lead in real time.', bodyC: 'rgba(255,255,255,0.65)', dotC: '#E8A020', itemC: 'rgba(255,255,255,0.55)', items: ['Features: Source, Customer_Type, Zone, Response_Time, Follow_Up_Count, Day, Campaign','Target variable: Is_Converted (binary)','Expected AUC: 0.78–0.82 based on feature richness','Deployment: REST API → CRM webhook → agent dashboard score card','Business impact: Sales team focuses on top 30% leads → 40% higher close rate'] },
-    { style: 'b', bg: '#E1F5EE', tag: 'Model 2 · Time Series', tagC: '#0FA882', title: 'Demand Forecasting', titleC: '#085041', body: 'Facebook Prophet or SARIMA model to forecast monthly lead volumes and conversion rates by channel, enabling proactive budget planning and staffing.', bodyC: '#0B7A5C', dotC: '#0F6E56', itemC: '#0B7A5C', items: ['Inputs: 36 months of monthly lead data by source','Outputs: 6-month ahead forecast with confidence intervals','Seasonality: captures Q4 peaks and January dips automatically','Use case: Pre-hire 3 extra agents before peak season; pre-book JustDial listings','Accuracy target: MAPE < 12% on rolling 3-month window'] },
-    { style: 'c', bg: '#FEF0C7', tag: 'Model 3 · Survival Analysis', tagC: '#E8A020', title: 'Churn Prediction & CLV', titleC: '#633806', body: 'Cox Proportional Hazards model to estimate time-to-churn for existing clients, enabling proactive retention campaigns before contract renewal dates.', bodyC: '#7A4F08', dotC: '#E8A020', itemC: '#7A4F08', items: ['Features: Contract_Value, Zone, Customer_Type, Tenure_Months, Support_Tickets','Output: Churn probability in next 90 days per client','Trigger: Auto-alert when churn probability > 40% → assign retention agent','CLV model: Avg deal value × renewal probability × expected tenure','Business impact: 10% reduction in churn = ₹8 Cr revenue retained annually'] },
+    { style: 'a', bg: '#0A1628', tag: 'Model 1 · Classification', tagC: 'rgba(255,255,255,0.35)', title: 'Lead Scoring Engine', titleC: '#E8A020', body: 'XGBoost or LightGBM model trained on 1,05,000 historical leads to predict conversion probability (0–100 score) for every new incoming lead in real time.', bodyC: 'rgba(255,255,255,0.65)', dotC: '#E8A020', itemC: 'rgba(255,255,255,0.55)', items: ['Features: Source, Customer_Type, Zone, Response_Time, Follow_Up_Count, Day, Campaign', 'Target variable: Is_Converted (binary)', 'Expected AUC: 0.78–0.82 based on feature richness', 'Deployment: REST API → CRM webhook → agent dashboard score card', 'Business impact: Sales team focuses on top 30% leads → 40% higher close rate'] },
+    { style: 'b', bg: '#E1F5EE', tag: 'Model 2 · Time Series', tagC: '#0FA882', title: 'Demand Forecasting', titleC: '#085041', body: 'Facebook Prophet or SARIMA model to forecast monthly lead volumes and conversion rates by channel, enabling proactive budget planning and staffing.', bodyC: '#0B7A5C', dotC: '#0F6E56', itemC: '#0B7A5C', items: ['Inputs: 36 months of monthly lead data by source', 'Outputs: 6-month ahead forecast with confidence intervals', 'Seasonality: captures Q4 peaks and January dips automatically', 'Use case: Pre-hire 3 extra agents before peak season; pre-book JustDial listings', 'Accuracy target: MAPE < 12% on rolling 3-month window'] },
+    { style: 'c', bg: '#FEF0C7', tag: 'Model 3 · Survival Analysis', tagC: '#E8A020', title: 'Churn Prediction & CLV', titleC: '#633806', body: 'Cox Proportional Hazards model to estimate time-to-churn for existing clients, enabling proactive retention campaigns before contract renewal dates.', bodyC: '#7A4F08', dotC: '#E8A020', itemC: '#7A4F08', items: ['Features: Contract_Value, Zone, Customer_Type, Tenure_Months, Support_Tickets', 'Output: Churn probability in next 90 days per client', 'Trigger: Auto-alert when churn probability > 40% → assign retention agent', 'CLV model: Avg deal value × renewal probability × expected tenure', 'Business impact: 10% reduction in churn = ₹8 Cr revenue retained annually'] },
   ];
   return (
     <div className="ml-grid-3" style={{ marginBottom: '16px' }}>

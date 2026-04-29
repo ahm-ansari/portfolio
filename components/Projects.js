@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const projects = [
   {
     icon: '📈',
@@ -5,6 +7,7 @@ const projects = [
     impact: '↑ 20% Hiring Speed',
     desc: 'End-to-end recruitment analytics using Python and SQL to identify bottlenecks across sourcing, screening, and offer stages. Power BI dashboard gives HR leadership real-time funnel visibility.',
     stack: ['Python', 'SQL', 'Power BI', 'Pandas'],
+    link: '#',
   },
   {
     icon: '🛒',
@@ -12,6 +15,7 @@ const projects = [
     impact: 'Discount ROI Optimized',
     desc: 'Analyzed 2 years of sales data across product categories to identify underperformers. Suggested targeted discount campaigns that boosted category revenue without margin erosion.',
     stack: ['Python', 'Excel', 'Pandas', 'Matplotlib'],
+    link: '#',
   },
   {
     icon: '🎯',
@@ -19,6 +23,7 @@ const projects = [
     impact: '↑ 35% Qualified Leads',
     desc: 'Built a Power BI model integrating CRM and marketing data to score and segment leads by conversion probability. Enhanced targeting across email and social channels for the sales team.',
     stack: ['Power BI', 'Excel', 'DAX', 'CRM Integration'],
+    link: '/case-study/lead-generation',
   },
   {
     icon: '⚡',
@@ -26,6 +31,7 @@ const projects = [
     impact: '↓ 40% Search Time',
     desc: 'Designed a Python-based automated data classification and tagging system with a lightweight HTML/CSS interface. Reduced manual search time by 40% for operations staff.',
     stack: ['Python', 'HTML', 'CSS', 'MySQL'],
+    link: '#',
   },
   {
     icon: '📺',
@@ -33,6 +39,7 @@ const projects = [
     impact: 'Content Strategy Optimized',
     desc: 'Mapped viewer behavior patterns for a 3,000+ subscriber IPTV platform. Analytics insights shaped content delivery strategy — peak hours, popular genres, churn risk segments.',
     stack: ['Web Analytics', 'PHP', 'MySQL', 'Dashboards'],
+    link: '#',
   },
   {
     icon: '🌐',
@@ -40,6 +47,7 @@ const projects = [
     impact: '↑ 25% Conversion Rate',
     desc: 'Full-stack e-commerce platform with React frontend and PHP CodeIgniter backend. Integrated BI modules and A/B testing infrastructure that lifted customer conversion by 25%.',
     stack: ['React', 'PHP', 'CodeIgniter', 'MySQL', 'BI Dashboards'],
+    link: '#',
   },
 ]
 
@@ -70,6 +78,9 @@ export default function Projects() {
                 {p.stack.map(t => (
                   <span className="stack-tag" key={t}>{t}</span>
                 ))}
+              </div>
+              <div className="project-card__footer">
+                <Link href={p.link} className="btn btn--outline" style={{ cursor: 'pointer', display: 'flex', justifyContent: 'right', color: "var(--white)" }}>View Project →</Link>
               </div>
             </article>
           ))}
