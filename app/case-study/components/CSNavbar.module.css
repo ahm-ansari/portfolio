@@ -1,0 +1,73 @@
+.nav {
+  background: var(--navy);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'IBM Plex Serif', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #5ecfc0;
+}
+
+.links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.links a,
+.blink {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.links a:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+}
+
+.tag {
+  background: var(--teal);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .nav {
+    padding: 0 20px;
+  }
+}

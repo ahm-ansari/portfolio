@@ -16,7 +16,7 @@ export const metadata = {
     title: 'Marketing Lead Generation Analysis | SafeGuard Security | Portfolio',
     description:
       '1,05,000 leads · ₹108.7 Cr revenue · 14 channels · Full analytics case study with SQL, Power BI, ML roadmap.',
-    url: 'https://ahm-ansari.dev/case-study/lead-generation',
+    url: 'https://ahm-ansari.vercel.app/case-study/lead-generation',
     images: [{ url: '/og-case-study.png', width: 1200, height: 630 }],
   },
 };

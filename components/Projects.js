@@ -3,11 +3,11 @@ import Link from 'next/link';
 const projects = [
   {
     icon: '📈',
-    title: 'Hiring Funnel Analysis',
+    title: 'Hiring Process Analysis',
     impact: '↑ 20% Hiring Speed',
     desc: 'End-to-end recruitment analytics using Python and SQL to identify bottlenecks across sourcing, screening, and offer stages. Power BI dashboard gives HR leadership real-time funnel visibility.',
     stack: ['Python', 'SQL', 'Power BI', 'Pandas'],
-    link: '#',
+    link: '/case-study/hiring-analysis',
   },
   {
     icon: '🛒',
@@ -79,8 +79,8 @@ export default function Projects() {
                   <span className="stack-tag" key={t}>{t}</span>
                 ))}
               </div>
-              <div className="project-card__footer">
-                <Link href={p.link} className="btn btn--outline" style={{ cursor: 'pointer', display: 'flex', justifyContent: 'right', color: "var(--white)" }}>View Project →</Link>
+              <div className="project-card__footer" style={{ cursor: 'pointer', display: 'flex', justifyContent: 'right' }}>
+                <Link href={p.link} className="btn btn--outline" style={{ borderColor: "var(--surface)", padding: "10px", color: "var(--white)" }}>View Case Study →</Link>
               </div>
             </article>
           ))}

@@ -1,0 +1,141 @@
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.methodCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.methodCard:hover {
+  box-shadow: 0 10px 32px rgba(12, 26, 46, 0.09);
+}
+
+.methodCard::before {
+  content: attr(data-num);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--border);
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  line-height: 1;
+}
+
+.methodCard h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  padding-right: 48px;
+}
+
+.methodCard p {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.techBadge {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  padding: 2px 9px;
+}
+
+/* Schema */
+.schemaHeader {
+  margin-bottom: 16px;
+}
+
+.schemaTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 12.5px;
+}
+
+.table thead {
+  background: var(--navy);
+}
+
+.table thead th {
+  padding: 12px 16px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--light);
+}
+
+.table tbody td {
+  padding: 11px 16px;
+  color: var(--text);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.badgeTeal { background: #e0f5f2; color: var(--teal); }
+.badgeMed  { background: #fff4e0; color: var(--amber); }
+.badgeHigh { background: #fdeaea; color: var(--coral); }
+
+@media (max-width: 768px) {
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+}

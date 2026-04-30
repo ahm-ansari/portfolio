@@ -375,14 +375,14 @@ export default function LeadGenReport() {
       `}</style>
 
       <div className="report-body">
-        {/* ── Back nav ── */}
+        {/* ── Back nav ──
         <div style={{ background: '#0A1628', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <Link href="/#projects" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '13px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
             ← Back to Portfolio
           </Link>
           <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
           <span style={{ color: '#E8A020', fontSize: '13px', fontWeight: 500 }}>Lead Generation Analysis — ABC private Security Company.</span>
-        </div>
+        </div>  */}
 
         {/* ══ COVER ══════════════════════════════════════════ */}
         <div style={{ background: '#0A1628', padding: '60px 40px', position: 'relative', overflow: 'hidden' }}>
