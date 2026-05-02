@@ -15,7 +15,7 @@ const projects = [
     impact: 'Discount ROI Optimized',
     desc: 'Analyzed 2 years of sales data across product categories to identify underperformers. Suggested targeted discount campaigns that boosted category revenue without margin erosion.',
     stack: ['Python', 'Excel', 'Pandas', 'Matplotlib'],
-    link: '/case-study/ecommerce-analysis',
+    link: '/case-study/ecommerce-analysis', 
   },
   {
     icon: '🎯',
