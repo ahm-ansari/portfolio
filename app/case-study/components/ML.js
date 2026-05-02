@@ -1,5 +1,5 @@
 import Section, { SectionLabel, SectionTitle, SectionDesc } from './Section';
-import { mlMetrics } from '@/app/data';
+import { mlMetrics } from '../hiring-analysis/lib/data';
 import { MLChart } from './Charts';
 import styles from './ML.module.css';
 
