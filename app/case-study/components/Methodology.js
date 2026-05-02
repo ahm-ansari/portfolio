@@ -1,5 +1,5 @@
 import Section, { SectionLabel, SectionTitle, SectionDesc } from './Section';
-import { methodSteps, schemaRows } from '@/app/data';
+import { methodSteps, schemaRows } from '../hiring-analysis/lib/data';
 import styles from './Methodology.module.css';
 
 const badgeColor = {
