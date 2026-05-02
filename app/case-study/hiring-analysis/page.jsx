@@ -3,10 +3,10 @@ import Hero from '../components/Hero';
 import { OverviewSection, ObjectivesSection } from '../components/Overview';
 import MethodologySection from '../components/Methodology';
 import EDASection from '../components/EDA';
-import FindingsSection from '../components/Findings';
+import FindingsSection from './elements/Findings';
 import MLSection from '../components/ML';
 import RecommendationsSection from '../components/Recommendations';
-import { StackSection, ConclusionSection } from '../components/Conclusion';
+import { StackSection, ConclusionSection } from './elements/Conclusion';
 import Footer from '../components/Footer';
 
 export default function HiringAnalyticsCaseStudy() {
