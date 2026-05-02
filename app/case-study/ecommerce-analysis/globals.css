@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --brand:      #1A5276;
+  --brand-dark: #0D2D4A;
+  --brand-lt:   #EEF4FF;
+  --saffron:    #E67E22;
+  --emerald:    #27AE60;
+  --ruby:       #E74C3C;
+  --ink:        #0F1923;
+  --ink-soft:   #374151;
+  --ink-muted:  #6B7280;
+  --surface:    #FAFAF8;
+  --surface-2:  #F3F4F0;
+  --border:     #E5E7EB;
+  --border-soft:#F0F1EE;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography ─────────────────────────────── */
+.display { font-family: var(--font-display); }
+.mono    { font-family: var(--font-mono); }
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface-2); }
+::-webkit-scrollbar-thumb { background: #C9CDD4; border-radius: 3px; }
+
+/* ── Section fade-in ────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Print ──────────────────────────────────── */
+@media print {
+  .no-print { display: none !important; }
+  .reveal    { opacity: 1 !important; transform: none !important; }
+}
