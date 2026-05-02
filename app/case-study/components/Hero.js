@@ -1,4 +1,4 @@
-import { heroMeta, kpis } from '@/app/data';
+import { heroMeta, kpis } from '../hiring-analysis/lib/data';
 import styles from './Hero.module.css';
 
 export default function Hero() {
