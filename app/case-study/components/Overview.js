@@ -1,5 +1,5 @@
 import Section, { SectionLabel, SectionTitle, SectionDesc } from './Section';
-import { problems, objectives } from '@/app/data';
+import { problems, objectives } from '../hiring-analysis/lib/data';
 import styles from './Overview.module.css';
 
 export function OverviewSection() {
