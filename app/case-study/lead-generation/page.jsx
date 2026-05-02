@@ -1,4 +1,4 @@
-import LeadGenReport from '@/components/sections/LeadGenReport';
+import LeadGenReport from '../../../components/sections/LeadGenReport';
 import CSNavbar from '../components/CSNavbar';
 
 export default function LeadGenerationCaseStudy() {
