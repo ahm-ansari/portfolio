@@ -43,7 +43,7 @@ const projects = [
   },
   {
     icon: '🌐',
-    title: 'E-Commerce Platform (Viveoli)',
+    title: 'E-Commerce Platform',
     impact: '↑ 25% Conversion Rate',
     desc: 'Full-stack e-commerce platform with React frontend and PHP CodeIgniter backend. Integrated BI modules and A/B testing infrastructure that lifted customer conversion by 25%.',
     stack: ['React', 'PHP', 'CodeIgniter', 'MySQL', 'BI Dashboards'],
