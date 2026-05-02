@@ -1,5 +1,5 @@
 import Section, { SectionLabel, SectionTitle } from './Section';
-import { recommendations, timeline, projections } from '@/app/data';
+import { recommendations, timeline, projections } from '../hiring-analysis/lib/data';
 import styles from './Recommendations.module.css';
 
 export default function RecommendationsSection() {
